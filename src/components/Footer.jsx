@@ -3,18 +3,14 @@ import { mySocials } from '../constants'
 
 const Footer = () => {
   return (
-    // Changed 'justify-between' to 'justify-center flex-col text-center' 
     <section className='flex flex-col items-center justify-center gap-4 pb-6 text-sm text-neutral-400 c-space w-full text-center'>
         
-        {/* Isolated the 1px line so it spans the width cleanly without trapping text inside it */}
         <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
         
-        {/* Centered Typography block */}
         <div className="flex items-center justify-center gap-2 mt-2">
-            <p>Made With ❤️ by Durga Rohith</p>
+            <p>Made With ❤️ by Rohith</p>
         </div>
         
-        {/* Centered Social Icons Row */}
         <div className="flex items-center justify-center gap-5 mt-1">
             {mySocials.map((social, index) => (
                 <a 

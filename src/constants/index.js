@@ -12,7 +12,7 @@ export const myProjects = [
       "Designed responsive dashboards with real-time data visualization and business intelligence features.",
     ],
 
-    href: "",
+    href: "https://salespulseai.vercel.app/",
     logo: "",
     image: "/assets/projects/salespulse-ai.jpg",
 
@@ -53,7 +53,7 @@ export const myProjects = [
       "Implemented application tracking and status management features to streamline the scholarship process.",
     ],
 
-    href: "",
+    href: "http://scholar-seva.vercel.app/",
     logo: "",
     image: "/assets/projects/scholarseva.jpg",
 
@@ -94,7 +94,7 @@ export const myProjects = [
       "Focused on secure architecture and best practices for protecting sensitive user data.",
     ],
 
-    href: "",
+    href: "https://aegiscore.vercel.app/",
     logo: "",
     image: "/assets/projects/aegis.jpg",
 
@@ -135,7 +135,7 @@ export const myProjects = [
       "Applied cybersecurity principles to improve threat detection and analysis workflows.",
     ],
 
-    href: "",
+    href: "https://shadownets.netlify.app/",
     logo: "",
     image: "/assets/projects/shadownet.jpg",
 
