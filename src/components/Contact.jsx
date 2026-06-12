@@ -20,7 +20,7 @@ const Contact = () => {
     }
 
     return (
-        <section className="relative flex items-center c-space section-spacing">
+       <section className="relative flex items-center c-space py-12 md:py-20 overflow-hidden w-full">
             <Particles
         className="absolute inset-0 -z-50"
         quantity={100}

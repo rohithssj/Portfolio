@@ -21,7 +21,7 @@ const Projects = () => {
 
     return (
         // Fixed: Removed 'onMouseMove' from the section wrapper so it leaves other sections alone!
-        <section onMouseMove={mouseMove} className="relative c-space section-spacing">
+        <section onMouseMove={mouseMove} className="relative c-space py-12 md:py-24">
             <h2 className="text-heading">My Projects</h2>
             <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full"/>
             
