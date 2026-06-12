@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react"
 import createGlobe from "cobe"
 import { useMotionValue, useSpring } from "motion/react"
-
 import { twMerge } from "tailwind-merge"
 
 const MOVEMENT_DAMPING = 1400
@@ -69,6 +68,8 @@ export function Globe({
     }
 
     useEffect(() => {
+        let isCurrent = true; 
+
         const onResize = () => {
             if (canvasRef.current) {
                 widthRef.current = canvasRef.current.offsetWidth
@@ -83,6 +84,9 @@ export function Globe({
             width: widthRef.current * 2,
             height: widthRef.current * 2,
             onRender: (state) => {
+                
+                if (!isCurrent) return; 
+
                 if (!pointerInteracting.current) phiRef.current += 0.005
                 state.phi = phiRef.current + rs.get()
                 state.width = widthRef.current * 2
@@ -90,23 +94,25 @@ export function Globe({
             },
         })
 
-        setTimeout(() => (canvasRef.current.style.opacity = "1"), 0)
+        setTimeout(() => {
+            if (isCurrent && canvasRef.current) {
+                canvasRef.current.style.opacity = "1"
+            }
+        }, 0)
+
         return () => {
+            isCurrent = false; 
             globe.destroy()
             window.removeEventListener("resize", onResize)
         }
     }, [rs, config])
 
     return (
-        <div
-            className={twMerge(
-                "mx-auto aspect-square w-full max-w-150",
-                className
-            )}
-        >
+   
+        <div className={twMerge("mx-auto aspect-square w-full max-w-xl", className)}>
             <canvas
                 className={twMerge(
-                    "size-[30rem] opacity-0 transition-opacity duration-500 contain-[layout_paint_size]"
+                    "w-full h-full opacity-0 transition-opacity duration-500"
                 )}
                 ref={canvasRef}
                 onPointerDown={(e) => {
