@@ -1,4 +1,4 @@
-import {FlipWords} from "../components/Flipwords"
+import {FlipWords} from "../sections/Flipwords"
 import { motion } from "motion/react"
 
 const Herotext = () => {
