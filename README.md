@@ -1,16 +1,117 @@
-# React + Vite
+# Durga Rohith Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built to showcase my projects, skills, and experience as a Full-Stack Developer interested in AI, web technologies, and immersive 3D experiences.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This portfolio serves as a central place to explore my work, learn about my technical background, and get in touch with me. It highlights selected projects, technologies I work with, and my ongoing journey as a developer.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Responsive design for desktop, tablet, and mobile devices
+* Interactive project showcase with detailed project information
+* Technology stack overview
+* About Me section
+* Contact form
+* Smooth animations and transitions
+* Interactive UI elements built with modern web technologies
 
-## Expanding the ESLint configuration
+## Projects Featured
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Some of the projects showcased in this portfolio include:
+
+* **SalesPulse AI** – An AI-powered sales intelligence dashboard built during a hackathon.
+* **ScholarSeva** – A platform focused on simplifying scholarship discovery and management.
+* **Aegis** – A cybersecurity-oriented project focused on security and threat analysis.
+* **ShadowNet** – A network monitoring and cybersecurity project.
+
+## Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* Tailwind CSS
+* Framer Motion / Motion
+* JavaScript
+
+### 3D & Interactive Technologies
+
+* Three.js
+* React Three Fiber
+
+### Development Tools
+
+* Git
+* GitHub
+* VS Code
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+* Node.js
+* npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project folder:
+
+```bash
+cd portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```bash
+http://localhost:5173
+```
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Purpose
+
+The goal of this portfolio is to:
+
+* Showcase personal and academic projects
+* Demonstrate technical skills and interests
+* Document ongoing learning and development
+* Provide a way for recruiters, collaborators, and developers to connect with me
+
+## Contact
+
+If you'd like to discuss a project, collaboration, internship opportunity, or simply connect, feel free to reach out through the contact section on the website.
+
+---
+
+Built and maintained by Rohith.

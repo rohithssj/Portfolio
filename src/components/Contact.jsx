@@ -18,7 +18,7 @@ const Contact = () => {
     }
 
     return (
-        <section className="relative flex items-center c-space py-12 md:py-20 overflow-hidden w-full">
+        <section className="relative flex items-center c-space py-12 md:py-20 overflow-hidden w-full" id='contact'>
             <Particles
                 className="absolute inset-0 -z-50"
                 quantity={100}

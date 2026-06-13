@@ -25,7 +25,7 @@ function Animate(){
 const Hero = () => {
     const mobile = useMediaQuery({maxWidth:853})
     return (
-        <section className='flex items-start justify-center md:justify-center md:items-start min-h-screen overflow-hidden c-space' >
+        <section id='home' className='flex items-start justify-center md:justify-center md:items-start min-h-screen overflow-hidden c-space' >
             <Herotext />
             <Parallax />
             <figure className='absolute inset-0' style={{
