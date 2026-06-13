@@ -14,7 +14,7 @@ export const myProjects = [
 
     href: "https://salespulseai.vercel.app/",
     logo: "",
-    image: "/assets/projects/salespulse-ai.jpg",
+    image: "/assets/projects/salespulse.png",
 
     tags: [
       {
@@ -55,7 +55,7 @@ export const myProjects = [
 
     href: "http://scholar-seva.vercel.app/",
     logo: "",
-    image: "/assets/projects/scholarseva.jpg",
+    image: "/assets/projects/scholarseva.png",
 
     tags: [
       {
@@ -96,7 +96,7 @@ export const myProjects = [
 
     href: "https://aegiscore.vercel.app/",
     logo: "",
-    image: "/assets/projects/aegis.jpg",
+    image: "/assets/projects/aegis.png",
 
     tags: [
       {
@@ -114,11 +114,11 @@ export const myProjects = [
         name: "MongoDB",
         path: "/assets/logos/mongodb.svg",
       },
-      {
-        id: 4,
-        name: "Express",
-        path: "/assets/logos/express.svg",
-      },
+      // {
+      //   id: 4,
+      //   name: "Express",
+      //   path: "/assets/logos/express.svg",
+      // },
     ],
   },
 
@@ -137,7 +137,7 @@ export const myProjects = [
 
     href: "https://shadownets.netlify.app/",
     logo: "",
-    image: "/assets/projects/shadownet.jpg",
+    image: "/assets/projects/shadownet.png",
 
     tags: [
       {
@@ -155,21 +155,17 @@ export const myProjects = [
         name: "MongoDB",
         path: "/assets/logos/mongodb.svg",
       },
-      {
-        id: 4,
-        name: "Docker",
-        path: "/assets/logos/docker.svg",
-      },
+      // {
+      //   id: 4,
+      //   name: "Docker",
+      //   path: "/assets/logos/docker.svg",
+      // },
     ],
   },
 ];
 
 export const mySocials = [
-  {
-    name: "WhatsApp",
-    href: "",
-    icon: "/assets/socials/whatsApp.svg",
-  },
+  
   {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/durga-rohith-20143737a/",
