@@ -1,4 +1,4 @@
-import {Flipwords} from "../components/Flipwords"
+import {FlipWords} from "../components/Flipwords"
 import { motion } from "motion/react"
 
 const Herotext = () => {
@@ -34,7 +34,7 @@ const Herotext = () => {
                             initial="hidden"
                             animate="visible"
                             transition={{ delay: 1.5 }}>
-                            <Flipwords words={["Intelligent", "Immersive", "Impactful"]} className='font-black text-white text-7xl px-0' />
+                            <FlipWords words={["Intelligent", "Immersive", "Impactful"]} className='font-black text-white text-7xl px-0' />
                         </motion.div>
                     </div>
 
@@ -72,7 +72,7 @@ const Herotext = () => {
                             initial="hidden"
                             animate="visible"
                             transition={{ delay: 1.5 }}>
-                            <Flipwords words={["Solutions", "Products", "Innovation"]} className='font-bold text-white text-6xl' />
+                            <FlipWords words={["Solutions", "Products", "Innovation"]} className='font-bold text-white text-6xl' />
                         </motion.div>
                     </div>
                     
