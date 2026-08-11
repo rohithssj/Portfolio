@@ -3,11 +3,11 @@ import React from 'react'
 const AboutPage = () => {
     return (
         <div className="mx-auto max-w-[1140px] px-6 flex gap-5 flex-col">
-            <div className=''>
+            <div>
                 <div className='flex items-center gap-2'>
                     <h1 className='flex gap-3 items-center'>
-                        <span className='text-[var(--accent)] font-sans'>01</span>
-                        <span className='font-sans text-3xl'>About</span>
+                        <span className='text-[var(--accent)] font-mono'>01</span>
+                        <span className='font-mono text-3xl'>About</span>
                         <span className='text-[var(--text-dim)] text-sm'>私について</span></h1>
                     <div className='bg-[var(--border)] h-px flex-1'></div>
                 </div>
