@@ -2,61 +2,153 @@ import React from 'react'
 
 const AboutPage = () => {
     return (
-        <div className="mx-auto max-w-[1140px] px-6">
+        <div className="mx-auto max-w-[1140px] px-6 flex gap-5 flex-col">
             <div className=''>
-                <div className='flex gap-10'>
-                    <h1>
-                    <span>01</span>
-                    <span>About</span>
-                    <span>私について</span></h1>
-                <div></div>
+                <div className='flex items-center gap-2'>
+                    <h1 className='flex gap-3 items-center'>
+                        <span className='text-[var(--accent)] font-sans'>01</span>
+                        <span className='font-sans text-3xl'>About</span>
+                        <span className='text-[var(--text-dim)] text-sm'>私について</span></h1>
+                    <div className='bg-[var(--border)] h-px flex-1'></div>
                 </div>
             </div>
-            <div>
-                <h2>
-                    I'm Rohith, a Computer Science student who turns ideas into shipped products — I learn by building, and I'd rather ship something imperfect than plan something perfect.
-                    Design and code aren't separate steps for me. I sketch the interaction first, then build it — this site is proof of that habit.
-                </h2>
+
+            <div className="mt-12 grid gap-12 lg:grid-cols-[1.2fr_1fr]">
+
                 <div>
-                    <div>
-                        <h1>15+</h1>
-                        <p>PROJECTS BUILT</p>
+
+
+                    <div className="flex max-w-xl flex-col gap-5">
+                        <p className="font-sans text-[15.5px] leading-relaxed text-[var(--text-dim)]">
+                            I'm Rohith, a Computer Science student who turns ideas into
+                            shipped products — I learn by building, and I'd rather ship
+                            something imperfect than plan something perfect.
+                        </p>
+
+                        <p className="font-sans text-[15.5px] leading-relaxed text-[var(--text-dim)]">
+                            Design and code aren't separate steps for me. I sketch the
+                            interaction first, then build it — this site is proof of that habit.
+                        </p>
                     </div>
-                    <div>
-                        <h1>5+</h1>
-                        <p>HACKATHONS</p>
+
+
+                    <div className="mt-10 grid grid-cols-2 border border-[var(--border)]">
+
+                        <div className="border-b border-r border-[var(--border)] bg-[var(--surface)] p-6">
+                            <h3 className="font-mono text-[32px] font-bold text-[var(--accent)]">
+                                15+
+                            </h3>
+
+                            <p className="mt-2 font-mono text-[11px] text-[var(--text-faint)]">
+                                PROJECTS BUILT
+                            </p>
+                        </div>
+
+
+                        <div className="border-b border-[var(--border)] bg-[var(--surface)] p-6">
+                            <h3 className="font-mono text-[32px] font-bold text-[var(--accent)]">
+                                5+
+                            </h3>
+
+                            <p className="mt-2 font-mono text-[11px] text-[var(--text-faint)]">
+                                HACKATHONS
+                            </p>
+                        </div>
+
+
+                        <div className="border-r border-[var(--border)] bg-[var(--surface)] p-6">
+                            <h3 className="font-mono text-[32px] font-bold text-[var(--accent)]">
+                                2+
+                            </h3>
+
+                            <p className="mt-2 font-mono text-[11px] text-[var(--text-faint)]">
+                                YEARS BUILDING
+                            </p>
+                        </div>
+
+
+                        <div className="bg-[var(--surface)] p-6">
+                            <h3 className="font-mono text-[32px] font-bold text-[var(--accent)]">
+                                ∞
+                            </h3>
+
+                            <p className="mt-2 font-mono text-[11px] text-[var(--text-faint)]">
+                                IDEAS NOT BUILT YET
+                            </p>
+                        </div>
+
                     </div>
-                    <div>
-                        <h1>2+</h1>
-                        <p>YEARS BUILDING</p>
-                    </div>
-                    <div>
-                        <h1>∞</h1>
-                        <p>IDEAS NOT BUILT YET</p>
-                    </div>
+
                 </div>
-                <div>
-                    <h1>BULDING WITH</h1>
+
+
+
+                <div className="flex flex-col gap-9">
+
                     <div>
-                        <p>React</p>
-                        <p>TypeScript</p>
-                        <p>Tailwind</p>
-                        <p>Express</p>
+                        <h3 className="font-mono text-[11px] font-medium text-[var(--accent)]">
+                            BUILDING WITH
+                        </h3>
+
+                        <div className="mt-4 flex flex-wrap gap-2 items-center">
+                            <span className='text-[var(--text-dim)] text-sm px-3 py-2 border border-[var(--border) rounded-[20px]'>
+                                React
+                            </span>
+                            <span className='text-[var(--text-dim)] text-sm px-3 py-2 border border-[var(--border) rounded-[20px]'>
+                                TypeScript
+                                </span>
+                            <span className='text-[var(--text-dim)] text-sm px-3 py-2 border border-[var(--border) rounded-[20px]'>
+                                Tailwind
+                                </span>
+                            <span className='text-[var(--text-dim)] text-sm px-3 py-2 border border-[var(--border) rounded-[20px]'>
+                                Express
+                                </span>
+                        </div>
                     </div>
-                    <h1>EXPLORING</h1>
+
+
                     <div>
-                        <p>GSAP</p>
-                        <p>Three.js</p>
-                        <p>R3F</p>
-                        <p>Gen AI / LLMs</p>
+                        <h3 className="font-mono text-[11px] font-medium text-[var(--accent)]">
+                            EXPLORING
+                        </h3>
+
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            <span className='text-[var(--text-dim)] text-sm px-3 py-2 border border-[var(--border) rounded-[20px]'>
+                                GSAP
+                                </span>
+                            <span className='text-[var(--text-dim)] text-sm px-3 py-2 border border-[var(--border) rounded-[20px]'>
+                                Three.js
+                                </span>
+                            <span className='text-[var(--text-dim)] text-sm px-3 py-2 border border-[var(--border) rounded-[20px]'>
+                                R3F
+                                </span>
+                            <span className='text-[var(--text-dim)] text-sm px-3 py-2 border border-[var(--border) rounded-[20px]'>
+                                Gen AI / LLMs
+                                </span>
+                        </div>
                     </div>
-                    <h1>LEVELING UP</h1>
+
+
                     <div>
-                        <p>DSA</p>
-                        <p>System Design</p>
-                        <p>Solving Skills</p>
+                        <h3 className="font-mono text-[12px] font-medium text-[var(--accent)]">
+                            LEVELING UP
+                        </h3>
+
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            <span className='text-[var(--text-dim)] text-sm px-3 py-2 border border-[var(--border) rounded-[20px]'>
+                                DSA
+                                </span>
+                            <span className='text-[var(--text-dim)] text-sm px-3 py-2 border border-[var(--border) rounded-[20px]'>
+                                System Design
+                                </span>
+                            <span className='text-[var(--text-dim)] text-sm px-3 py-2 border border-[var(--border) rounded-[20px]'>
+                                Solving Skills
+                                </span>
+                        </div>
                     </div>
+
                 </div>
+
             </div>
         </div>
     )
