@@ -4,44 +4,109 @@ import ProjectModal from "./ProjectModal";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger)
 
 const ProjectPage = () => {
     const [selectedProject, setSelectedProject] = useState(null);
+    const [activeProject, setActiveProject] = useState(0)
 
     const sectionRef = useRef(null);
     const pinRef = useRef(null);
     const trackRef = useRef(null);
 
-    gsap.registerPlugin(ScrollTrigger)
 
 
 
     useGSAP(() => {
 
-        const track = trackRef.current
-        const pin = pinRef.current
+        const track = trackRef.current;
+        const pin = pinRef.current;
+
+        if (!pin || !track) return;
+
+        const cards = gsap.utils.toArray(".project-card");
 
         const scrollAmount = () => {
-            return track.scrollWidth - pin.offsetWidth
-        }
-
-        if (!pin || !track) return
+            return track.scrollWidth - pin.offsetWidth;
+        };
 
         gsap.to(track, {
+
             x: () => -scrollAmount(),
+
             ease: "none",
 
             scrollTrigger: {
-                trigger: pin,
-                start: "top top",
-                pin: true,
-                scrub: 1,
-                end: () => `+=${scrollAmount()}`,
-                invalidateOnRefresh:true,
-            }
-        })
 
-    }, [sectionRef])
+                trigger: pin,
+
+                start: "top top",
+
+                pin: true,
+
+                scrub: 1,
+
+                end: () => `+=${scrollAmount()}`,
+
+                invalidateOnRefresh: true,
+
+                onUpdate: (self) => {
+
+                    const progress = self.progress;
+
+                    const activeIndex = Math.min(
+                        cards.length - 1,
+                        Math.floor(progress * cards.length)
+                    );
+
+                    setActiveProject((previous) => {
+                        if (previous === activeIndex) {
+                            return previous;
+                        }
+
+                        return activeIndex;
+                    });
+
+                    cards.forEach((card, index) => {
+
+                        const distance = index - activeIndex;
+
+                        if (distance === 0) {
+
+                            gsap.set(card, {
+                                opacity: 1,
+                                scale: 1,
+                                y: 0,
+                            });
+
+                        } else if (distance < 0) {
+
+                            gsap.set(card, {
+                                opacity: 0.45,
+                                scale: 0.96,
+                                y: 8,
+                            });
+
+                        } else {
+
+                            gsap.set(card, {
+                                opacity: 0.7,
+                                scale: 0.98,
+                                y: 0,
+                            });
+
+                        }
+
+                    });
+
+                }
+            }
+
+        });
+
+    }, {
+        scope: sectionRef
+    });
 
     return (
         <section

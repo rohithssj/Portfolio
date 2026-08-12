@@ -1,9 +1,88 @@
-import React from "react";
+import React, { useRef } from "react";
 import { experiences } from "../data/experience";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 const ExperiencePage = () => {
+
+
+  const sectionRef = useRef(null)
+  const lineRef = useRef(null)
+
+  useGSAP(() => {
+
+    gsap.fromTo(
+      lineRef.current,
+      {
+        scaleY: 0
+      },
+      {
+        scaleY: 1,
+        ease: "none",
+
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 70%",
+          end: "bottom 70%",
+          scrub: 1,
+        }
+      }
+    )
+
+    const items = gsap.utils.toArray(".experience-item")
+
+    items.forEach((item) => {
+
+      const dot = item.querySelector(".experience-dot");
+      gsap.fromTo(
+        item,
+        {
+          opacity: 0.25,
+          y: 30
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: "power2.out",
+
+          scrollTrigger: {
+            trigger: item,
+            start: "top 75%",
+            toggleActions: "play none none reverse",
+          }
+        }
+      )
+
+      gsap.fromTo(
+    dot,
+    {
+        backgroundColor: "var(--bg)",
+        scale: 1
+    },
+    {
+        backgroundColor: "var(--accent)",
+        scale: 1.1,
+        duration: 0.4,
+        ease: "power2.out",
+
+        scrollTrigger: {
+            trigger: item,
+            start: "top 75%",
+            toggleActions: "play none none reverse"
+        }
+    }
+)
+
+    })
+  }, {
+    scope: sectionRef
+  })
   return (
     <section
+    ref={sectionRef}
       id="experience"
       className="mx-auto max-w-[1140px] px-6 py-24"
     >
@@ -30,14 +109,19 @@ const ExperiencePage = () => {
 
         <div className="absolute bottom-0 left-2 top-2 w-px bg-[var(--border)]" />
 
+        <div
+          ref={lineRef}
+          className="absolute left-2 top-2 w-px origin-top bg-[var(--accent)]" />
+
         {experiences.map((exp, index) => (
           <div
             key={exp.id || index}
-            className="relative pb-14 last:pb-0"
+            className="experience-item relative pb-14 last:pb-0"
           >
 
             <span
               className="
+              experience-dot
                 absolute
                 -left-[34px]
                 top-1
