@@ -170,13 +170,13 @@ const AboutPage = () => {
                             <h3
                                 data-target="10"
                                 data-suffix="+"
-                                className="about-stat font-mono text-[32px] font-bold text-[var(--accent)]"
+                                className=" font-mono text-[32px] font-bold text-[var(--accent)]"
                             >
-                                0+
+                                ∞
                             </h3>
 
                             <p className="mt-2 font-mono text-[11px] text-[var(--text-faint)]">
-                                PROJECTS SHIPPED
+                                IDEAS NOT BUILT YET
                             </p>
 
                         </div>
