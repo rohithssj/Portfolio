@@ -11,6 +11,13 @@ const HeroPage = () => {
                 斬
             </div>
 
+            <div className='absolute inset-0 overflow-hidden pointer-events-none'>
+                <img className='absolute right-[-30%] top-1/2  h-[90%] w-auto -translate-y-1/2 object-contain opacity-[0.030] grayscale mix-blend-screen brightness-[0.35] sm:right-[-15%] sm:h-[110%] lg:right-0 lg:top-63 lg:h-[140%]' 
+                src="/images/vastro_lorde.jpg" 
+                 />
+
+            </div>
+
             
             <div className="relative z-10 mx-auto w-full max-w-[1140px] px-6">
 

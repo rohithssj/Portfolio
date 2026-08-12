@@ -20,3 +20,8 @@
   --font-sans: "Geist", sans-serif;
   --font-mono: "Geist Mono", monospace;
 }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
