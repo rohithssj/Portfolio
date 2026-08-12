@@ -57,24 +57,24 @@ const ExperiencePage = () => {
       )
 
       gsap.fromTo(
-    dot,
-    {
-        backgroundColor: "var(--bg)",
-        scale: 1
-    },
-    {
-        backgroundColor: "var(--accent)",
-        scale: 1.1,
-        duration: 0.4,
-        ease: "power2.out",
+        dot,
+        {
+          backgroundColor: "var(--bg)",
+          scale: 1
+        },
+        {
+          backgroundColor: "var(--accent)",
+          scale: 1.1,
+          duration: 0.4,
+          ease: "power2.out",
 
-        scrollTrigger: {
+          scrollTrigger: {
             trigger: item,
             start: "top 75%",
             toggleActions: "play none none reverse"
+          }
         }
-    }
-)
+      )
 
     })
   }, {
@@ -82,7 +82,7 @@ const ExperiencePage = () => {
   })
   return (
     <section
-    ref={sectionRef}
+      ref={sectionRef}
       id="experience"
       className="mx-auto max-w-[1140px] px-6 py-24"
     >
@@ -133,6 +133,19 @@ const ExperiencePage = () => {
                 bg-[var(--bg)]
               "
             />
+
+            <span className="
+        scale-0
+        text-[9px]
+        text-[var(--accent)]
+        opacity-0
+        transition-all
+        duration-300
+        group-hover/dot:scale-100
+        group-hover/dot:opacity-100
+    ">
+              斬
+            </span>
 
             <div className="flex flex-col gap-2">
 
